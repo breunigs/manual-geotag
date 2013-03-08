@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Manual Geolocator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        font-size: 14px;
+        font-family: sans-serif;
+      }
+
+      #map {
+        width: -webkit-calc( 100% - 380px );
+        width: -moz-calc( 100% - 380px );
+        width: calc( 100% - 380px );
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      #sidebar {
+        width: 380px;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-left: 2px solid #aeaeae;
+      }
+
+      #wrapper {
+        margin: 10px;
+      }
+
+      .leaflet-popup-close-button {
+        display: none;
+      }
+
+      .leaflet-popup-content {
+        margin: 1px 1px -3px !important;
+      }
+
+      .leaflet-popup-content img {
+        border-radius: 20px;
+      }
+
+      td, th {
+        text-align: left;
+      }
+
+      #export {
+        width: 100%;
+        height: 150px;
+      }
+    </style>
+    <link href="css/leaflet.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <div id="sidebar">
+      <div id="wrapper">
+        <h2>Select Pictures</h2>
+        multi-select is possible
+        <input type="file" id="picSelector" multiple onchange="window.loadPictures(this.files)">
+
+        <h2>Preview</h2>
+        <div id="preview"></div>
+
+        <h2>Export</h2>
+        You need to have <tt>exiv2</tt> installed. Go into the directory where the selected images are and execute the command:
+        <textarea id="export" wrap="off"></textarea>
+
+        <h2><a href="">Start Over / New Batch</a></h2>
+      </div>
+    </div>
+    <script src="js/jquery-2.0.0b2.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/exif.js"></script>
+    <script src="magic.js"></script>
+
+    <div style="" id="imgInitArea"></div>
+  </body>
+</html>
