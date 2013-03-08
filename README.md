@@ -26,4 +26,4 @@ Allows you to batch geotag images using a map. The basic work flow is like this:
 Start a new batch by clicking the link at the bottom right.
 
 
-[![Screenshot of the tool in action](https://raw.github.com/breunigs/ingress-intel-total-conversion/master/images/screen.png)](https://raw.github.com/breunigs/ingress-intel-total-conversion/master/images/screen.png)
+![Screenshot of the tool in action](https://raw.github.com/breunigs/manual-geotag/master/images/screen.png)
